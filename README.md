@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 School Management System  
 
-## Getting Started
+A mini web application built with *Next.js* and *MySQL* that allows users to:  
+1. *Add new schools* with details and images.  
+2. *View and explore schools* in a modern, responsive UI.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+##  Features  
+
+- *Add School Page* (/addSchool)  
+  - Form built with react-hook-form + validation.  
+  - Uploads school image to public/schoolImages.  
+  - Prevents duplicate school entries.  
+
+- *Show Schools Page* (/showSchools)  
+  - Displays schools in a grid (like an e-commerce product list).  
+  - Includes *search* and *filter by state*.  
+  - Modal popup with full school details.  
+  - Fully responsive for desktop & mobile.  
+
+- *Home Page* (/)  
+  - Navigation to Add School and Show Schools pages.  
+  - Animated UI with Lottie and Framer Motion.  
+
+---
+
+## 🛠 Tech Stack  
+
+- *Frontend:* Next.js, React, Tailwind CSS, Framer Motion, Lottie  
+- *Backend:* Next.js API Routes, MySQL (mysql2)  
+- *Database:* MySQL (schooldb with schools table)  
+
+---
+
+##  Database Setup  
+
+Run the following queries in MySQL:  
+
+```sql
+CREATE DATABASE schooldb;
+
+USE schooldb;
+
+CREATE TABLE schools (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name TEXT,
+  address TEXT,
+  city TEXT,
+  state TEXT,
+  contact VARCHAR(15),
+  email_id VARCHAR(255),
+  image TEXT
+);
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Setup Instructions 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+git clone https://github.com/your-username/school-management.git
+cd school-management
 
-## Learn More
+## Install dependencies 
+- npm install
 
-To learn more about Next.js, take a look at the following resources:
+## configure database connection in
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-/lib/db.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Run the development server 
+  npm run dev
+  open http://localhost:3000 in your browser
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  ## Deployment 
+
+  Github Repo:
+  Live Project: 
+
+  #Author 
+  Developed by Abinaya S
+
+  ---
+
+##  Screenshots  
+
+###  Home Page  
+![Home Page](public/screenshots/home.png)  
+
+###  Add School Page  
+![Add School Page](public/screenshots/addschool.png)  
+
+###  Show Schools Page  
+![Show Schools Page](public/screenshots/showschool.png)  
+
+### 📑 School Details Modal  
+![School Details](public/screenshots/schoolschooldetails.png)  
+
+### 🗄 Database (MySQL Command Line)  
+![Database Screenshot](public/screenshots/database.png)  
+
+### ⚙ MySQL Startup  
+![MySQL Start](public/screenshots/mysqlstart.png)
