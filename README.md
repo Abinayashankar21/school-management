@@ -58,7 +58,7 @@ CREATE TABLE schools (
 
 ## Setup Instructions 
 
-git clone https://github.com/your-username/school-management.git
+git clone https://github.com/Abinayashankar21/school-management.git
 cd school-management
 
 ## Install dependencies 
@@ -77,8 +77,8 @@ cd school-management
 
   ## Deployment 
 
-  Github Repo:
-  Live Project: 
+  Github Repo:https://github.com/Abinayashankar21/school-management.git
+  Live Project:
 
   #Author 
   Developed by Abinaya S
@@ -96,7 +96,7 @@ cd school-management
 ###  Show Schools Page  
 ![Show Schools Page](public/screenshots/showschool.png)  
 
-### 📑 School Details Modal  
+###  School Details Modal  
 ![School Details](public/screenshots/schoolschooldetails.png)  
 
 ### 🗄 Database (MySQL Command Line)  
